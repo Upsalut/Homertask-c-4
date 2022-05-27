@@ -3,16 +3,16 @@
 int[] array= new int[12];
 int resultPlus=0;
 int resultMinus=0;
-for (int i=1; i<=12; i++)
+for (int i=0; i<array.Length; i++)
 {
-    array[i-1]=new Random().Next(-10,10);
-    if (array[i-1]>0)
+    array[i]=new Random().Next(-10,10);
+    if (array[i]>0)
     {
-     resultPlus=resultPlus+array[i-1];
+     resultPlus=resultPlus+array[i];
     }
-    else if(array[i-1]<0)
+    else if(array[i]<0)
     {
-     resultMinus=resultMinus+array[i-1];
+     resultMinus=resultMinus+array[i];
     } 
 }
 Console.WriteLine($"Сумма положительных = {resultPlus}");
